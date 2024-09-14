@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        raleway: ["var(--font-raleway)"],
+        podkova: ["var(--font-podkova)"],
       },
     },
   },
