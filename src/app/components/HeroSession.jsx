@@ -24,7 +24,7 @@ const HeroSession = () => {
   );
 };
 const HeroWrapper = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="[&_span]:block">{children}</div>;
 };
 
 export default HeroSession;
