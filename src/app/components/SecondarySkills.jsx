@@ -17,7 +17,7 @@ const SecondarySkills = () => {
   return (
     <div>
       <SessionHeading>And Everthing Else</SessionHeading>
-      <div className="flex gap-4 overflow-hidden">
+      <div className="flex gap-4 overflow-hidden h-16">
         <SkillWrapper skillName="HTML5" color="#e54d26" size={SIZE}>
           <DiHtml5 />
         </SkillWrapper>

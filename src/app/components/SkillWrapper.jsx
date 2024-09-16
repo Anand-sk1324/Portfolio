@@ -6,11 +6,15 @@ const SkillWrapper = ({
   size = "20px",
 }) => {
   return (
-    <span className="w-20">
+    <span className="min-w-16 flex flex-col items-center justify-center  relative group">
       <IconContext.Provider value={{ size, color }}>
-        <span>{skillIcon}</span>
+        <span className=" relative group-hover:-translate-y-2 transition-transform">
+          {skillIcon}
+        </span>
       </IconContext.Provider>
-      {skillName}
+      <span className="absolute opacity-0 bottom-0 translate-y-2 group-hover:opacity-100 group-hover:-translate-y-0 transition-all">
+        {skillName}
+      </span>
     </span>
   );
 };

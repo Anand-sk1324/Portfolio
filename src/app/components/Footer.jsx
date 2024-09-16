@@ -1,10 +1,11 @@
 import React from "react";
+import { CgArrowTopRight } from "react-icons/cg";
 
 const Footer = () => {
   return (
     <div>
-      Want to Learn More?
-      <ul>
+      <span className="hidden md:block">Want to Learn More?</span>
+      <ul className="flex gap-6 mx-auto  w-fit">
         <Contact
           href="https://www.instagram.com/Karthick._.anandan"
           title="Instagram"
@@ -24,10 +25,11 @@ const Footer = () => {
 
 const Contact = ({ title, href }) => {
   return (
-    <l1>
+    <l1 className="flex items-center gap-1 hover:text-slate-50 transition-colors">
       <a href={href} target="_blank">
         {title}
       </a>
+      <CgArrowTopRight />
     </l1>
   );
 };

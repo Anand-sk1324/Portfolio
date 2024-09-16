@@ -10,8 +10,10 @@ const PrimarySkills = () => {
   const SIZE = "40px";
   return (
     <div>
-      <SessionHeading>Base Tech Stack</SessionHeading>
-      <div className="flex gap-4 overflow-hidden">
+      <SessionHeading>
+        Base <span className="text-white">Tech Stack</span>
+      </SessionHeading>
+      <div className="flex justify-center gap-4 h-16 overflow-hidden">
         <SkillWrapper skillName="React" color="#61dbfb" size={SIZE}>
           <DiReact />
         </SkillWrapper>

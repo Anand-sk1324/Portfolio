@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
           ${raleway.variable}
           ${podkova.variable}
           font-raleway
+          *:text-slate-400
           `}
       >
         {children}

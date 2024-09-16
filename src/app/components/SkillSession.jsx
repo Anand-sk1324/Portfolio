@@ -5,10 +5,14 @@ import SecondarySkills from "./SecondarySkills";
 
 const SkillSession = () => {
   return (
-    <SessionContainer>
-      <PrimarySkills />
-      <SecondarySkills />
-    </SessionContainer>
+    <>
+      <SessionContainer id="Skills">
+        <PrimarySkills />
+      </SessionContainer>
+      <SessionContainer>
+        <SecondarySkills />
+      </SessionContainer>
+    </>
   );
 };
 

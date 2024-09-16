@@ -8,13 +8,15 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Nav />
       <HeroSession />
-      <SkillSession />
-      <ProjectSession />
-      <ContactSession />
-      <Footer />
+      <div className="bg-slate-950 relative z-30 py-5">
+        <SkillSession />
+        <ProjectSession />
+        <ContactSession />
+        <Footer />
+      </div>
     </div>
   );
 }

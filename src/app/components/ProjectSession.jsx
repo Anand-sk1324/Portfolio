@@ -1,15 +1,19 @@
+"use client";
 import React from "react";
 import SessionHeading from "./SessionHeading";
 import SessionContainer from "./SessionContainer";
+import { IconContext } from "react-icons";
 import { FaRegCheckCircle } from "react-icons/fa";
 import Link from "./Link";
 import { projectData } from "../constants";
 
 const ProjectSession = () => {
   return (
-    <SessionContainer>
-      <SessionHeading>Personal & Professional Projects</SessionHeading>
-      <div>
+    <SessionContainer id="Projects">
+      <SessionHeading>
+        Personal & Professional <span className="text-white ">Projects</span>
+      </SessionHeading>
+      <div className="flex flex-col gap-10">
         {projectData.map((project) => (
           <ProjectContainer
             key={project.id}
@@ -33,23 +37,30 @@ const ProjectContainer = ({
   sourceCodeUrl,
 }) => {
   return (
-    <div>
-      <div className="flex flex-wrap">
+    <div className="mx-5 px-6 py-6 border border-slate-50 rounded-lg bg-slate-100/5">
+      <div className="flex flex-wrap gap-3">
         {techStack.map((tech) => (
-          <span key={tech}>{tech}</span>
+          <span
+            key={tech}
+            className="border border-slate-100 px-5 py-1 text-slate-100 rounded-full"
+          >
+            {tech}
+          </span>
         ))}
       </div>
       <ProjectHeading>
         {title.map((t, i) => (
-          <span key={i}>{t.data} </span>
+          <span key={i} className={t.style === "bright" ? "text-slate-50" : ""}>
+            {t.data}{" "}
+          </span>
         ))}
       </ProjectHeading>
-      <div>
+      <div className="space-y-2 mb-6">
         {keyPoints.map((k, i) => (
           <Point key={i}>{k}</Point>
         ))}
       </div>
-      <div>
+      <div className="flex flex-col-reverse gap-6 w-fit">
         {sourceCodeUrl && (
           <Link href={sourceCodeUrl} type="secondary">
             Source Code
@@ -65,12 +76,16 @@ const ProjectContainer = ({
   );
 };
 const ProjectHeading = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="text-xl font-bold my-4">{children}</div>;
 };
 const Point = ({ children }) => {
   return (
-    <div>
-      <FaRegCheckCircle />
+    <div className="flex  gap-2 ">
+      <div className="w-4 h-4 pt-1">
+        <IconContext.Provider value={{ size: "16px" }}>
+          <FaRegCheckCircle />
+        </IconContext.Provider>
+      </div>
       {children}
     </div>
   );
