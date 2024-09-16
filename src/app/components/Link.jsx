@@ -1,18 +1,38 @@
 const Link = ({ type = "secondary", href = "#", children }) => {
-  let styles = " px-4 py-2 font-semibold rounded-md ";
-  if (type === "primary") {
-    styles = styles + " special-bg text-black font-bold";
+  if (type == "primary") {
+    return (
+      <PrimaryLink>
+        <BaseLink href={href}>{children}</BaseLink>
+      </PrimaryLink>
+    );
+  } else {
+    return (
+      <SecondaryLink>
+        <BaseLink href={href}>{children}</BaseLink>
+      </SecondaryLink>
+    );
   }
-  if (type === "secondary") {
-    styles =
-      styles +
-      "border-2 border-slate-300 text-slate-300 hover:border-slate-100 hover:text-slate-100 transition-colors";
-  }
+};
+const BaseLink = ({ children, href }) => {
   return (
-    <div>
-      <a className={styles} href={href} target="_blank">
+    <div className="px-5 py-3 md:px-8 md:py-5 font-bold">
+      <a href={href} className="">
         {children}
       </a>
+    </div>
+  );
+};
+const PrimaryLink = ({ children }) => {
+  return (
+    <div className="special-bg rounded-lg text-slate-800 w-fit h-fit ">
+      {children}
+    </div>
+  );
+};
+const SecondaryLink = ({ children }) => {
+  return (
+    <div className=" text-slate-400 border border-slate-400 rounded-lg w-fit h-fit">
+      {children}
     </div>
   );
 };

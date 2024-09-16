@@ -3,9 +3,9 @@ import { CgArrowTopRight } from "react-icons/cg";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="flex justify-between md:max-w-screen-md xl:max-w-screen-lg  mx-auto">
       <span className="hidden md:block">Want to Learn More?</span>
-      <ul className="flex gap-6 mx-auto  w-fit">
+      <ul className="flex gap-6 mx-auto md:mx-0  w-fit">
         <Contact
           href="https://www.instagram.com/Karthick._.anandan"
           title="Instagram"

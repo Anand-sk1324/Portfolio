@@ -1,10 +1,25 @@
 import { IconContext } from "react-icons";
+import React, { useLayoutEffect, useState } from "react";
+
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
 const SkillWrapper = ({
   skillName = "",
   children: skillIcon,
   color = "white",
-  size = "20px",
 }) => {
+  const [width] = useWindowSize();
+  const size = width < 768 ? "40px" : "60px";
   return (
     <span className="min-w-16 flex flex-col items-center justify-center  relative group">
       <IconContext.Provider value={{ size, color }}>

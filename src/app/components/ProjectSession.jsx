@@ -13,7 +13,7 @@ const ProjectSession = () => {
       <SessionHeading>
         Personal & Professional <span className="text-white ">Projects</span>
       </SessionHeading>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 md:gap-16">
         {projectData.map((project) => (
           <ProjectContainer
             key={project.id}
@@ -37,12 +37,12 @@ const ProjectContainer = ({
   sourceCodeUrl,
 }) => {
   return (
-    <div className="mx-5 px-6 py-6 border border-slate-50 rounded-lg bg-slate-100/5">
-      <div className="flex flex-wrap gap-3">
+    <div className="mx-5 px-6 py-6 border border-slate-50 rounded-lg bg-slate-100/5 flex flex-col gap-4 md:gap-8 md:max-w-screen-md lg:max-w-screen-lg xl:w-[1280px] md:m-auto aspect-video max-h-[500px]">
+      <div className="flex flex-wrap gap-3 ">
         {techStack.map((tech) => (
           <span
             key={tech}
-            className="border border-slate-100 px-5 py-1 text-slate-100 rounded-full"
+            className="border border-slate-100 px-5 py-1 text-slate-100 rounded-full md:text-lg"
           >
             {tech}
           </span>
@@ -55,12 +55,12 @@ const ProjectContainer = ({
           </span>
         ))}
       </ProjectHeading>
-      <div className="space-y-2 mb-6">
+      <div className="space-y-2">
         {keyPoints.map((k, i) => (
           <Point key={i}>{k}</Point>
         ))}
       </div>
-      <div className="flex flex-col-reverse gap-6 w-fit">
+      <div className="flex flex-col-reverse md:flex-row gap-6 w-fit h-full items-end">
         {sourceCodeUrl && (
           <Link href={sourceCodeUrl} type="secondary">
             Source Code
@@ -76,7 +76,7 @@ const ProjectContainer = ({
   );
 };
 const ProjectHeading = ({ children }) => {
-  return <div className="text-xl font-bold my-4">{children}</div>;
+  return <div className="text-xl md:text-3xl font-bold ">{children}</div>;
 };
 const Point = ({ children }) => {
   return (

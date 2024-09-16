@@ -11,7 +11,7 @@ export default function Home() {
     <div className="">
       <Nav />
       <HeroSession />
-      <div className="bg-slate-950 relative z-30 py-5">
+      <div className="bg-slate-950 relative z-30 py-5 md:py-16">
         <SkillSession />
         <ProjectSession />
         <ContactSession />

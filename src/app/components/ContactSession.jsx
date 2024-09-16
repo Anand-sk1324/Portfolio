@@ -8,8 +8,8 @@ const ContactSession = () => {
       <SessionHeading>
         Can We <span className="text-white">Work</span> Together?
       </SessionHeading>
-      <div className=" px-4 py-3 special-bg text-black font-bold text-lg flex flex-col md:flex-row items-center gap-2 text-center">
-        Let’s create something amazing together
+      <div className=" px-4 py-3 special-bg text-black font-bold text-lg flex flex-col md:flex-row md:justify-between items-center gap-2 text-center md:max-w-screen-md  xl:max-w-screen-lg md:mx-auto md:rounded-full md:px-10 md:py-6">
+        <span>Let’s create something amazing together</span>
         <div className="">
           <a
             href="mailto:anand.sk1324@gmail"

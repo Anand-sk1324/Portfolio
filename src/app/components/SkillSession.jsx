@@ -7,10 +7,10 @@ const SkillSession = () => {
   return (
     <>
       <SessionContainer id="Skills">
-        <PrimarySkills />
-      </SessionContainer>
-      <SessionContainer>
-        <SecondarySkills />
+        <div className="space-y-12">
+          <PrimarySkills />
+          <SecondarySkills />
+        </div>
       </SessionContainer>
     </>
   );

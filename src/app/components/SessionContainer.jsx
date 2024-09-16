@@ -7,7 +7,7 @@ const SessionContainer = ({
   isHome = false,
 }) => {
   return (
-    <div className={"scroll-m-16 mb-10" + className} id={id}>
+    <div className={"scroll-m-16 mb-10 md:mb-20" + className} id={id}>
       {children}
     </div>
   );

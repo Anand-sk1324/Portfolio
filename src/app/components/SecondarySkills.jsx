@@ -16,8 +16,8 @@ const SecondarySkills = () => {
   const SIZE = "40px";
   return (
     <div>
-      <SessionHeading>And Everthing Else</SessionHeading>
-      <div className="flex gap-4 overflow-hidden h-16">
+      <SessionHeading>And Everything Else</SessionHeading>
+      <div className="flex gap-4 overflow-hidden md:gap-24 h-16 md:h-24">
         <SkillWrapper skillName="HTML5" color="#e54d26" size={SIZE}>
           <DiHtml5 />
         </SkillWrapper>
