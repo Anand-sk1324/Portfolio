@@ -6,7 +6,7 @@ const HeroSession = () => {
   return (
     <SessionContainer
       id="hero"
-      className=" h-screen sticky top-0 flex justify-center items-center overflow-hidden py-10"
+      className=" h-screen sticky top-0 flex justify-center items-center overflow-hidden py-10 "
       isHome
     >
       <div className=" flex flex-col items-center justify-center h-full relative z-20 ">

@@ -6,6 +6,8 @@ import { IconContext } from "react-icons";
 import { FaRegCheckCircle } from "react-icons/fa";
 import Link from "./Link";
 import { projectData } from "../constants";
+import RotationHandler from "./RotationHandler";
+import { motion } from "framer-motion";
 
 const ProjectSession = () => {
   return (
@@ -16,7 +18,7 @@ const ProjectSession = () => {
       <div className="flex flex-col gap-10 md:gap-16">
         {projectData.map((project) => (
           <ProjectContainer
-            key={project.id}
+            key={project.key}
             title={project.title}
             techStack={project.techStack}
             keyPoints={project.keyPoints}
@@ -60,7 +62,7 @@ const ProjectContainer = ({
           <Point key={i}>{k}</Point>
         ))}
       </div>
-      <div className="flex flex-col-reverse md:flex-row gap-6 w-fit h-full items-end">
+      <div className="flex flex-col-reverse md:flex-row gap-6 w-full h-full md:items-end">
         {sourceCodeUrl && (
           <Link href={sourceCodeUrl} type="secondary">
             Source Code

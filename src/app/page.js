@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="  " id="">
       <Nav />
       <HeroSession />
       <div className="bg-slate-950 relative z-30 py-5 md:py-16">

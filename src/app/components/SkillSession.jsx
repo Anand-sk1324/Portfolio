@@ -6,8 +6,8 @@ import SecondarySkills from "./SecondarySkills";
 const SkillSession = () => {
   return (
     <>
-      <SessionContainer id="Skills">
-        <div className="space-y-12">
+      <SessionContainer id="Skills" className="bg-slate-950">
+        <div className="space-y-12 ">
           <PrimarySkills />
           <SecondarySkills />
         </div>

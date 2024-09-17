@@ -1,5 +1,6 @@
 import React from "react";
 import { CgArrowTopRight } from "react-icons/cg";
+import NavLink from "./NavLink";
 
 const Footer = () => {
   return (
@@ -25,12 +26,12 @@ const Footer = () => {
 
 const Contact = ({ title, href }) => {
   return (
-    <l1 className="flex items-center gap-1 hover:text-slate-50 transition-colors">
-      <a href={href} target="_blank">
-        {title}
-      </a>
-      <CgArrowTopRight />
-    </l1>
+    <NavLink href={href}>
+      <div className="flex items-center gap-1 ">
+        <span>{title}</span>
+        <CgArrowTopRight />
+      </div>
+    </NavLink>
   );
 };
 
